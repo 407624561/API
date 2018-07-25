@@ -2,8 +2,7 @@
 import unittest
 import json
 import requests
-from apihttp.common import *
-from requests1.LicesenCommon import *
+from apihttp.common import CommonMethod
 class CreateTest(unittest.TestCase):
     def setUp(self):
         pass
@@ -13,7 +12,7 @@ class CreateTest(unittest.TestCase):
         id="800"
         userid="1000"
         url="http://47.92.88.246:8999/it-license/it/license/create"
-        createFile = open("..\data\create.json")
+        createFile = open("../data/create.json")
         headers = {'content-type': 'application/json'}
         loadData=json.load(createFile)
         data=json.dumps(loadData)
